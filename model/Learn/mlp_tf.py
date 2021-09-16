@@ -26,7 +26,6 @@ if __name__ == "__main__":
 	#build model 2 -> 5 -> 5 -> 1
 	model = tf.keras.Sequential([
 		tf.keras.layers.Dense(5,input_dim = 2, activation="sigmoid"),
-		tf.keras.layers.Dense(5,input_dim = 5,activation = "sigmoid"),
 		tf.keras.layers.Dense(1,activation = "sigmoid")
 	])
 
