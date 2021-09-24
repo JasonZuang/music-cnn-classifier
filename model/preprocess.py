@@ -6,8 +6,8 @@ import json
 SAMPLE_RATE = 22040
 DURATION = 30
 SPT = SAMPLE_RATE * DURATION
-DATAPATH = "Data/genres_original/"
-JSONPATH = "Data/data.json"
+DATAPATH = "Data/test_clips/"
+JSONPATH = "Data/data_test.json"
 
 def save_mfcc(data_path, json_path, n_mfcc = 13, n_fft = 2048, hop_length = 512, num_seg = 5):
 
@@ -32,6 +32,7 @@ def save_mfcc(data_path, json_path, n_mfcc = 13, n_fft = 2048, hop_length = 512,
 
 	for f in filenames:
 		#load audio file
+		print(f)
 		if "._" not in f:
 
 			filepath = os.path.join(dirpath,f)
